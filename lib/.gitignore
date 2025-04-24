@@ -1,0 +1,5 @@
+/build/
+/*.iml
+/.idea/
+/*.lock
+/.flutter-plugins
