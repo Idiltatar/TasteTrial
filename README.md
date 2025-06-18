@@ -1,16 +1,30 @@
-# touristapp
+# TasteTrail
 
-A new Flutter project.
+**TasteTrail** is a  web application built with Flutter to help tourists discover the most iconic local dishes in different countries and cities. The app uses an interactive map and curated data to provide a culturally rich food discovery experience.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🌍 Features
 
-A few resources to get you started if this is your first Flutter project:
+- View dishes by selecting countries and cities
+- Tap on dishes to view images and cultural background
+- Interactive map powered by `flutter_map` + OpenStreetMap
+- Cross-platform support (Android, iOS, Web)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+---
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 🚀 Getting Started
+
+### Prerequisites
+
+- [Flutter SDK](https://flutter.dev/docs/get-started/install)
+- Dart 3+
+- Firebase project (for future authentication and data handling)
+
+### Installation
+
+```bash
+git clone (https://github.com/Idiltatar/TasteTrial/tree/master)
+cd tastetrail
+flutter pub get
+flutter run -d chrome  # or use an emulator/device
