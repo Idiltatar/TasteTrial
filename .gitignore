@@ -43,3 +43,22 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+# Dart & Flutter
+.dart_tool/
+.flutter-plugins
+.packages
+.pub-cache/
+build/
+.idea/
+node_modules/
+android/.gradle/
+ios/Pods/
+*.iml
+
+# macOS
+.DS_Store
+
+# Sensitive
+google-services.json
+GoogleService-Info.plist
+
