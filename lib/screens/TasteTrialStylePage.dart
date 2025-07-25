@@ -101,13 +101,25 @@ class _TasteTrialStylePageState extends State<TasteTrialStylePage> {
                     ),
                   ],
                 ),
+
                 const SizedBox(height: 16),
+
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/firestore');
+                  },
+                  child: const Text("Show Firestore Dishes"),
+                ),
+
+                const SizedBox(height: 16),
+
                 Expanded(
                   child: ListView.builder(
                     itemCount: dishes.length,
                     itemBuilder: (context, index) {
                       final dish = dishes[index];
                       final isFav = favoriteDishes.contains(dish.name);
+
                       return Container(
                         margin: const EdgeInsets.only(bottom: 16),
                         decoration: BoxDecoration(

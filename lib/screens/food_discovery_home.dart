@@ -15,7 +15,6 @@ class _FoodDiscoveryHomePageState extends State<FoodDiscoveryHomePage> {
     'Istanbul': ['Kebab', 'Baklava', 'Lahmacun'],
     'Paris': ['Croissant', 'Baguette', 'Ratatouille'],
     'Tokyo': ['Sushi', 'Ramen', 'Tempura'],
-    'New York': ['Pizza', 'Bagel', 'Cheesecake'],
   };
 
   @override

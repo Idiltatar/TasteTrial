@@ -37,7 +37,6 @@ void main() {
     await tester.tap(find.text('Istanbul'));
     await tester.pumpAndSettle();
 
-    // Check dish card text
     expect(find.text('Menemen'), findsWidgets);
   });
 

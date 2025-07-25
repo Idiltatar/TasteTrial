@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../screens/map_screen.dart';
 
 class DishDetailScreen extends StatelessWidget {
   final String name;
   final String description;
   final String location;
   final String imagePath;
+  final double latitude;
+  final double longitude;
 
   const DishDetailScreen({
     super.key,
@@ -13,6 +16,8 @@ class DishDetailScreen extends StatelessWidget {
     required this.description,
     required this.location,
     required this.imagePath,
+    required this.latitude,
+    required this.longitude,
   });
 
   @override
@@ -79,6 +84,34 @@ class DishDetailScreen extends StatelessWidget {
                   style: GoogleFonts.montserrat(
                     fontSize: 16,
                     color: Colors.black87,
+                  ),
+                ),
+                const SizedBox(height: 24),
+                Center(
+                  child: ElevatedButton.icon(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder:
+                              (context) => MapScreen(
+                                lat: latitude,
+                                lng: longitude,
+                                cityName: location,
+                              ),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.map),
+                    label: const Text('Show on Map'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.deepOrange,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 12,
+                      ),
+                      textStyle: const TextStyle(fontSize: 16),
+                    ),
                   ),
                 ),
               ],

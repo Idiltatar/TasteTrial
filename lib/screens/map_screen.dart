@@ -16,16 +16,27 @@ class MapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mapController = MapController();
+    print('🗺️ Map opened for $cityName at LAT: $lat — LNG: $lng');
+
+    const double initialZoom = 6.0;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('$cityName on Map'),
         backgroundColor: Colors.deepOrange,
       ),
       body: FlutterMap(
-        options: MapOptions(center: LatLng(lat, lng), zoom: 13.0),
+        mapController: mapController,
+        options: MapOptions(
+          initialCenter: LatLng(lat, lng),
+          initialZoom: initialZoom,
+        ),
         children: [
           TileLayer(
-            urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+            urlTemplate:
+                'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png',
+            subdomains: const ['a', 'b', 'c'],
             userAgentPackageName: 'com.example.tastetrail',
           ),
           MarkerLayer(
